@@ -3,7 +3,7 @@ Contributors: chriskloss, twentyZen
 Tags: open graph, webZunder, Social Media, structured data,seo, SEO, google, meta, meta description, search engine optimization, description, Facebook, google authorship, google+, Social Sharing, 
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: 1.5.4
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
@@ -32,10 +32,12 @@ Um Probleme vorzubeugen raten wir von der parallelen Nutzung andere SEO-Plugins,
 
 
 == Installation ==
-1. Lade den `webzunder_og_wpplugin` Ordner in das `/wp-content/plugins/` Verzeichnis hoch
+1. Lade den `webzunder` Ordner in das `/wp-content/plugins/` Verzeichnis hoch
 1. Aktiviere das webZunder Open Graph Plugin im `Plugin` Menu in WordPress
 1. Konfiguriere das Plugin in dem du im Admin-Menu unter `Einstellung` auf den Punkt `webZunder Plugin` gehst
 
+oder
+Installiere es direkt aus deinem WordPress Dashboard heraus.
 
 == Frequently Asked Questions ==
 Du findest die FAQ unter [www.webzunder.com/de/webzunder-open-graph-plugin/](http://www.webzunder.com/de/webzunder-open-graph-plugin/faq/)
