@@ -71,10 +71,11 @@ function wbZ_add_meta_box() {
 	foreach ( $screens as $screen ) {
 
 		add_meta_box(
-			'wbZ_section',
+			'wbZ-section',
 			 'webZunder Optionen',
 			'wbZ_meta_box',
-			$screen
+			$screen,
+			$context='advanced'
 		);
 	}
 }
@@ -112,7 +113,7 @@ function wbZ_meta_box( $post ) { /* $post Objekt vom aktuellen Post*/
             
      ?></td></tr>
 	
-    
+   
 	
 <?php
 }
