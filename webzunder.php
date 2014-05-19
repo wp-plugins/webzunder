@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     /*
      Plugin Name: webZunder Open Graph Plugin
      Plugin URI: http://www.webzunder.com/de/webZunder-Open-Graph-Plugin
@@ -280,7 +280,7 @@ function wbZ_social_links( $user )
                 <td><input type="text" name="google_profil" value="<?php echo esc_attr(get_the_author_meta( 'google_profil', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
         </table>
-    <?php
+<?php
 }
 
 add_action( 'personal_options_update', 'wbZ_save_social_links' );
