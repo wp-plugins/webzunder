@@ -5,7 +5,7 @@
      Description: Dieses Plugin zeigt die Open Graph Tags in die Webseite und gibt die in webZunder eingetragenen Daten im Wordpress an.
      Author: twentyZen GmbH
      Author URI: http://www.twentyzen.com
-     Version: 1.5.4
+     Version: 1.5.5
      License: GPL v2 or Later
 
     webZunder Open Graph Plugin
@@ -255,6 +255,45 @@ function wbZ_display_settings() {
 <?php 
 } 
 
+
+add_action( 'show_user_profile', 'wbZ_social_links' );
+add_action( 'edit_user_profile', 'wbZ_social_links' );
+
+function wbZ_social_links( $user )
+{
+    ?>
+        <h3>Profile in Sozialen Netzwerken</h3>
+
+        <table class="form-table">
+            <tr>
+                <th><label for="facebook_profile">Facebook Profil</label></th>
+                <td><input type="text" name="facebook_profil" value="<?php echo esc_attr(get_the_author_meta( 'facebook_profil', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+
+            <tr>
+                <th><label for="twitter_profile">Twitter Profil</label></th>
+                <td><input type="text" name="twitter_profil" value="<?php echo esc_attr(get_the_author_meta( 'twitter_profil', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+
+            <tr>
+                <th><label for="google_profile">Google+ Profil</label></th>
+                <td><input type="text" name="google_profil" value="<?php echo esc_attr(get_the_author_meta( 'google_profil', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+        </table>
+    <?php
+}
+
+add_action( 'personal_options_update', 'wbZ_save_social_links' );
+add_action( 'edit_user_profile_update', 'wbZ_save_social_links' );
+
+function wbZ_save_social_links( $user_id )
+{
+    update_user_meta( $user_id,'facebook_profil', sanitize_text_field( $_POST['facebook_profil'] ) );
+    update_user_meta( $user_id,'twitter_profil', sanitize_text_field( $_POST['twitter_profil'] ) );
+    update_user_meta( $user_id,'google_profil', sanitize_text_field( $_POST['google_profil'] ) );
+}
+
+
 /*og- Meta Tags Output in Pageheader*/
 add_action( 'wp_head', 'wbZ_meta_tags' );
 function wbZ_meta_tags() {
@@ -337,7 +376,12 @@ function wbZ_meta_tags() {
           
         if(is_single() && $type=="article" && !is_page()){
        
-         echo '<meta property="article:author" content="'.get_author_posts_url($user_id).'"/>'."\r\n";   /* link to article author */
+         if(get_the_author_meta( 'facebook_profil', $user_id )==""){
+             echo '<meta property="article:author" content="'.get_author_posts_url($user_id).'"/>'."\r\n";   /* link to article author */
+         }else{
+                 echo '<meta property="article:author" content="'.get_the_author_meta( 'facebook_profil', $user_id ).'"/>'."\r\n";   /* link to article author */
+         }
+         
          if(get_option('wbZ_fbid')!=""){
              echo '<meta property="article:publisher" content="'.get_option('wbZ_fbid').'"/>'."\r\n";   /* article publisher FB URL via Plugin Page */
          }
@@ -345,9 +389,17 @@ function wbZ_meta_tags() {
          echo '<meta property="article:modified_time" content="'.get_the_modified_date('c').'"/>'."\r\n";   /* modified date */
          echo '<meta property="og:updated_time" content="'.get_the_modified_date('c').'"/>'."\r\n";   /* modified date */
          
+	if(get_the_author_meta( 'google_profil', $user_id )!=""){
+            echo '<link rel="author" href="'.get_the_author_meta( 'google_profil', $user_id ).'" />'."\r\n";
+        }else{
+            //nothing
+        }
         }
        
-       if(get_option('wbZ_googleid')!=""){
+        
+            
+               
+        if(get_option('wbZ_googleid')!=""){
             if(preg_match('/^[0-9]*$/',get_option('wbZ_googleid'))){
             echo '<link rel="publisher" href="https://plus.google.com/'.get_option('wbZ_googleid').'"/>'."\r\n";
         }else{
