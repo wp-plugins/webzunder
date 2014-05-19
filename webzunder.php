@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     /*
      Plugin Name: webZunder Open Graph Plugin
      Plugin URI: http://www.webzunder.com/de/webZunder-Open-Graph-Plugin
@@ -224,7 +224,7 @@ function wbZ_display_settings() {
                 <td><input type="text" name="wbZ_googleid" value="<?php echo get_option('wbZ_googleid'); ?>" /></td>
             </tr>
          </table>
-        <p>Verbinden Sie ihre Facebook Seite mit ihrer Webseite. Einfach die URL Zu Facebbook angeben.</p>
+        <p>Verbinden Sie ihre Facebook Seite mit ihrer Webseite. Einfach die URL zu Facebook angeben.</p>
         <table class="form-table" width="100%">
             <tr valign="top">
                 <th scope="row">Facebook Seiten URL</th>
