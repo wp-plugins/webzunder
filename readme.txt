@@ -49,9 +49,9 @@ Du findest die FAQ unter [www.webzunder.com/de/webzunder-open-graph-plugin/](htt
 3. Das eigene Online-Marketing anheizen mit webZunder und dem webZunder Open-Graph Plugin
 
 == Changelog ==
-=1.5.5.1=
+= 1.5.5.1 =
 [Bugfix] Description can now contain quotes.
-=1.5.5= 
+= 1.5.5 = 
 Added Option Fields  in User Profile to add Social Links for Facebook and Google Authorship
-=1.5.4=
+= 1.5.4 =
 Inital Commit into WordPress Repository
