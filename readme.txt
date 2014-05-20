@@ -4,7 +4,7 @@ Tags: open graph, webZunder, Social Media, structured data,seo, SEO, google, met
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.5.5
+Stable tag: 1.5.5.1
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
@@ -49,5 +49,9 @@ Du findest die FAQ unter [www.webzunder.com/de/webzunder-open-graph-plugin/](htt
 3. Das eigene Online-Marketing anheizen mit webZunder und dem webZunder Open-Graph Plugin
 
 == Changelog ==
-1.5.5 Added Option Fields  in User Profile to add Social Links for Facebook and Google Authorship
-1.5.4 Inital Commit into WordPress Repository
+=1.5.5.1=
+[Bugfix] Description can now contain quotes.
+=1.5.5= 
+Added Option Fields  in User Profile to add Social Links for Facebook and Google Authorship
+=1.5.4=
+Inital Commit into WordPress Repository

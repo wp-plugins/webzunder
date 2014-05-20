@@ -2,10 +2,10 @@
     /*
      Plugin Name: webZunder Open Graph Plugin
      Plugin URI: http://www.webzunder.com/de/webZunder-Open-Graph-Plugin
-     Description: Dieses Plugin zeigt die Open Graph Tags in die Webseite und gibt die in webZunder eingetragenen Daten im Wordpress an.
+     Description: Dieses Plugin zeigt die Open Graph Tags in die Webseite und gibt die in webZunder eingetragenen Daten im WordPress an.
      Author: twentyZen GmbH
      Author URI: http://www.twentyzen.com
-     Version: 1.5.5
+     Version: 1.5.5.1
      License: GPL v2 or Later
 
     webZunder Open Graph Plugin
@@ -309,7 +309,7 @@ function wbZ_meta_tags() {
              
              echo '<meta property="og:title" content="'.get_bloginfo('title').'"/>'."\r\n"; /*og:title  filled by wordpress*/
             if(get_option('wbZ_description')!=""){
-             echo '<meta property="og:description" content="'.get_option('wbZ_description').'"/>'."\r\n";   /* og:description defined in plugin (default)*/
+             echo '<meta property="og:description" content="'.esc_html(get_option('wbZ_description')).'"/>'."\r\n";   /* og:description defined in plugin (default)*/
             }
             if(get_option('wbZ_image')!=""){
              echo '<meta property="og:image" content="'.get_option('wbZ_image').'"/>'."\r\n";   /* og:image defined in plugin (default)*/
@@ -342,7 +342,8 @@ function wbZ_meta_tags() {
             $desc= $custom_fields['og:description'][0]; /* og:title custom field filled by webZunder*/
             
        }
-              echo '<meta property="og:description" content="'.$desc.'"/>'."\r\n"; /*og:title  filled by wordpress*/
+             
+               echo '<meta property="og:description" content="'.esc_html($desc).'"/>'."\r\n"; /*og:title  filled by wordpress*/
        
         
         echo '<meta property="og:url" content="'.get_permalink(get_query_var('p')).'" />'."\r\n";  /* og:url */
