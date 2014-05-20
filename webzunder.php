@@ -233,7 +233,7 @@ function wbZ_display_settings() {
          </table>
    
     <?php submit_button(); ?>
-
+    <p><b>Tipp:</b> Sie können in Ihrem <a href="<?php echo get_edit_user_link(); ?>#profiles" >Nutzerprofil</a> Links zu Ihren Social Media Profilen eintragen.  </p>
 </form>
 </div>
 <div class="opright">
@@ -262,7 +262,7 @@ add_action( 'edit_user_profile', 'wbZ_social_links' );
 function wbZ_social_links( $user )
 {
     ?>
-        <h3>Profile in Sozialen Netzwerken</h3>
+        <h3 id="profiles">Profile in Sozialen Netzwerken</h3>
 
         <table class="form-table">
             <tr>
