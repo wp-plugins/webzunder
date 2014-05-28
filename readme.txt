@@ -1,54 +1,57 @@
 === webZunder Open Graph Plugin ===
 Contributors: chriskloss, twentyZen
-Tags: open graph, webZunder, Social Media, structured data,seo, SEO, google, meta, meta description, search engine optimization, description, Facebook, google authorship, google+, Social Sharing, 
+Tags: admin, blogpost, google, google plus, image, images, open graph, page, pages, plugin, Post, posts, re-post, seo, sharing, social, social network, social networks, socialnetwork, socialnetworks,Serp,Authorship,webZunder, Social Media, structured data,SEO, meta, meta description, search engine optimization, description, google authorship, google+, Social Sharing  
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.5.5.1
+Stable tag: 1.5.6
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
-Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und Facebook aufbessern.
+Improve the distribution of your website content easily by adding Open Graph information for Google and Facebook
 
 == Description ==
-Mit dem webZunder Open Graph Plugin kannst du deinen WordPress Blog kinderleicht für Google und Facebook aufbessern. Mit Hilfe von Open Graph Meta Tags können deine Beiträge besser auf Facebook geteilt und auf Google gefunden werden. 
 
-Durch das von Facebook entwickelte Protokoll, werden Webseiten und deren Inhalte besser strukturiert und für Mensch sowie Maschine besser verständlich.
+By using the webZunder Open Graph Plugin, you can easily improve the presentation of your content in social networks like Google and Facebook and in search engine results. 
 
-Mit dem Plugin kann:
+With the Plugin you can easily
+* define a fallback description for pages and posts without a description
+* define a fallback image for pages and posts without an image
+* define an individual description and an individual image for your posts and pages 
+* connect your Google+ Business Page with your WordPress pages (Google publisher tag)
+* connect your Google+ User Profile with your WordPress articles. So your G+ avatar appears aside the search results (Google author tag)
+* connect your Facebook Business Page with your WordPress site (Facebook publisher tag)
 
-* eine Standardbeschreibung für Beiträge/Seiten ohne eigene Beschreibung definiert werden
-* ein Standardbild für Beiträge/Seiten ohne eigenes Betragsbild definiert werden
-* jedem Beitrag eine eigene individuelle Beschreibung zugewiesen werden
-* dein Google+ Firmen-Profil mit deiner Seite verbunden werden.  
-* dein Google+ Nutzerprofil mit deiner Seite verbunden werden. Somit erscheint dein G+ Avatar neben den Suchergebnissen
-* deine Facebook-Seite mit deiner Webseite verbunden werden
+To avoid problems, we recommend to desist from parallel using other SEO-plugin which supports Open Graph meta tags.
 
-Um Probleme vorzubeugen raten wir von der parallelen Nutzung andere SEO-Plugins, welche die Ausgabe von Open Graph-Tags unterstützen, ab.
 
-= TIPP: = 
->Du willst deine Social Media Aktivitäten besser kontrollieren und steuern können? Dann probiere doch mal das Plugin in Kombination mit webZunder aus. Ganz einfach 30 Tage unverbindlich testen und das eigene Online Marketing anheizen. 
+= HINT: = 
+>You want to better monitor and control your social media activities? Then try it out the plugin in combination with webZunder. Simply try webZunder risk-free for 30 days and push on your own online marketing.
 >
->Mehr Informationen dazu findest du auf [www.webzunder.com](http://www.webzunder.com/de/)
+>Find further information on [www.webzunder.com](http://www.webzunder.com/)
 
 
 == Installation ==
-1. Lade den `webzunder` Ordner in das `/wp-content/plugins/` Verzeichnis hoch
-1. Aktiviere das webZunder Open Graph Plugin im `Plugin` Menu in WordPress
-1. Konfiguriere das Plugin in dem du im Admin-Menu unter `Einstellung` auf den Punkt `webZunder Plugin` gehst
+1. upload the `webzunder` folder into the `/wp-content/plugins/` directory
+1. activate the webZunder Open Graph Plugin through the `Plugin` menu in WordPress
+1. configure the plugin by going to the `webZunder Plugin`menu that appears in your admin menu
 
-oder
-installiere es direkt aus deinem WordPress Dashboard heraus.
+or
+
+install the plugin directly through the WordPress Dashboard
 
 == Frequently Asked Questions ==
-Du findest die FAQ unter [www.webzunder.com/de/webzunder-open-graph-plugin/](http://www.webzunder.com/de/webzunder-open-graph-plugin/faq/)
+You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http://www.webzunder.com/de/webzunder-open-graph-plugin/faq/)
 
 == Screenshots ==
-1. Plugin Option Seite
-2. Plugin Boxen unterhalb des Editors
-3. Das eigene Online-Marketing anheizen mit webZunder und dem webZunder Open-Graph Plugin
+1. Plugin Option page
+2. Plugin Boxes beneath the Editor
+3. Push your own online marketing with webZunder and the webZunder Open Graph plugin
+
 
 == Changelog ==
+= 1.5.6 =
+The plugin is now available in english and german.
 = 1.5.5.1 =
 [Bugfix] Description can now contain quotes.
 = 1.5.5 = 

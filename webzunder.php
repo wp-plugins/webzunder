@@ -2,9 +2,9 @@
     /*
      Plugin Name: webZunder Open Graph Plugin
      Plugin URI: http://www.webzunder.com/de/webZunder-Open-Graph-Plugin
-     Description: Dieses Plugin zeigt die Open Graph Tags in die Webseite und gibt die in webZunder eingetragenen Daten im WordPress an.
-     Author: twentyZen GmbH
+     Description: Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und Facebook aufbessern.
      Author URI: http://www.twentyzen.com
+     Author: twentyZen
      Version: 1.5.6
      License: GPL v2 or Later
      Text Domain: webzunder
@@ -238,7 +238,7 @@ function wbZ_display_settings() {
    
     <?php submit_button(); ?>
     <p><b><?php _e('Tipp:','webzunder'); ?></b><?php
-        _e('Sie können in Ihrem Nutzerprofil Links zu Ihren Social Media Profilen eintragen.','webzunder');
+        _e('Sie können in Ihrem Nutzerprofil Links zu Ihren Social Media Profilen eintragen. ','webzunder');
        $url=get_edit_user_link().'#profiles';
        $link=sprintf(__('<a href="%s">Zum Nutzerprofil gehen.</a>','webzunder'),esc_url($url));
        echo $link ?></p>
