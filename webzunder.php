@@ -5,9 +5,10 @@
      Description: Dieses Plugin zeigt die Open Graph Tags in die Webseite und gibt die in webZunder eingetragenen Daten im WordPress an.
      Author: twentyZen GmbH
      Author URI: http://www.twentyzen.com
-     Version: 1.5.5.1
+     Version: 1.5.6
      License: GPL v2 or Later
-
+     Text Domain: webzunder
+     
     webZunder Open Graph Plugin
     Copyright (C) 2013-2014, twentyZen GmbH - contact@twentyZen.com
 
@@ -27,6 +28,8 @@
 
     //TODO Kommentare ergänzen bzw erneuern    
    
+load_plugin_textdomain('webzunder', false, basename( dirname( __FILE__ ) ) . '/languages' );
+      
 /*enqueuing scripts and styles*/
  function wbZ_admin_scripts()
  {
@@ -39,6 +42,7 @@
  wp_enqueue_script('wbZ-upload');
  }
  }
+ 
  
  function wbZ_admin_styles()
  {
@@ -72,7 +76,7 @@ function wbZ_add_meta_box() {
 
 		add_meta_box(
 			'wbZ-section',
-			 'webZunder Optionen',
+			 __('webZunder Optionen', 'webzunder'),
 			'wbZ_meta_box',
 			$screen,
 			$context='advanced'
@@ -94,17 +98,17 @@ function wbZ_meta_box( $post ) { /* $post Objekt vom aktuellen Post*/
 	
 	<table class="form-table" width="100%">
         <tr valign="top">
-        <th scope="row"><?php echo '<label for="wbZ_ogtitle_field">Titel: </label> ';?></th>
+        <th scope="row"><?php echo '<label for="wbZ_ogtitle_field">'.__('Beitragstitel', 'webzunder').': </label> ';?></th>
         <td><?php echo '<input type="text" id="wbZ_ogtitle_field" name="wbZ_ogtitle_field" value="' . esc_attr( $ogtitle ) . '" size="60" maxlength="60" />'.'<br>';
      ?></td></tr>
 	
 	    <tr valign="top">
-        <th scope="row"><?php echo '<label for="wbZ_ogdesc_field">Beschreibung: </label> ';?></th>
+        <th scope="row"><?php echo '<label for="wbZ_ogdesc_field">'.__('Beitragsbeschreibung', 'webzunder').': </label> ';?></th>
         <td><?php echo '<textarea id="wbZ_ogdesc_field" name="wbZ_ogdesc_field" maxlength="160" rows="2" cols="60">'. esc_attr( $ogdesc ).'</textarea>'.'<br>';
      ?></td></tr>
      
          <tr valign="top">
-        <th scope="row"><?php echo '<label for="wbZ_ogimage_field">Bildurl: </label> ';?></th>
+        <th scope="row"><?php echo '<label for="wbZ_ogimage_field">'.__('Beitragsbild URL', 'webzunder').'</label> ';?></th>
         <td><?php
               if($ogimage==""){
                  $ogimage=wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); //wenn kein bild durch nutzer oder webzunder definiert, nimm artikelbild
@@ -192,7 +196,7 @@ function wbZ_display_settings() {
 <div class="wrap">
 <div class="opleft">
 <h2>webZunder Plugin</h2>
-<p>Die hier erfassten Daten werden als Standard Angaben für die Open Graph Meta Tags genutzt und ausgeben, wenn keine anderen Daten angeben werden.</p>
+<p><?php _e('Die hier erfassten Daten werden als Standard Angaben für die Open Graph Meta Tags genutzt und ausgeben, wenn keine anderen Daten angeben werden.', 'webzunder');?></p>
 <form method="post" action="options.php">
     
     <?php 
@@ -203,51 +207,60 @@ function wbZ_display_settings() {
         <tr valign="top">
         
         <tr valign="top">
-        <th scope="row">Standard-Beschreibung</th>
+        <th scope="row"><?php _e('Standard-Beschreibung','webzunder');?></th>
         <td><textarea name="wbZ_description" maxlength="160" rows="2" cols="50"><?php echo get_option('wbZ_description'); ?></textarea></td>
         </tr>
         
         <tr valign="top">
-        <th scope="row">Standardbild </th>
+        <th scope="row"><?php _e('Standard-Bild','webzunder');?></th>
         <td>
             <input id="wbZ_image" type="text" name="wbZ_image" value="<?php echo get_option('wbZ_image'); ?>" size="50" maxlength="256" />
-            <input  class="wbZ_upload button" type="button" value="Bild auswählen" />
+            <input  class="wbZ_upload button" type="button" value="<?php _e('Bild auswählen','webzunder');?>" />
         </td>
                         
         </tr>
  
     </table>
-        <p>Verbinden Sie ihre Google+ Seite mit ihrer Webseite. Einfach die Google+-ID angeben.</p>
+        <p><?php _e('Verbinden Sie ihre Google+ Seite mit ihrer Webseite. Einfach die Google+-ID angeben.','webzunder');?></p>
         <table class="form-table" width="100%">
             <tr valign="top">
                 <th scope="row">Google+ ID</th>
                 <td><input type="text" name="wbZ_googleid" value="<?php echo get_option('wbZ_googleid'); ?>" /></td>
             </tr>
          </table>
-        <p>Verbinden Sie ihre Facebook Seite mit ihrer Webseite. Einfach die URL zu Facebook angeben.</p>
+        <p><?php _e('Verbinden Sie ihre Facebook Seite mit ihrer Webseite. Einfach die URL zu Facebook angeben.','webzunder');?></p>
         <table class="form-table" width="100%">
             <tr valign="top">
-                <th scope="row">Facebook Seiten URL</th>
+                <th scope="row"><?php _e('Facebook Seiten URL','webzunder');?></th>
                 <td><input type="text" name="wbZ_fbid" value="<?php echo get_option('wbZ_fbid'); ?>" /></td>
             </tr>
          </table>
    
     <?php submit_button(); ?>
-    <p><b>Tipp:</b> Sie können in Ihrem <a href="<?php echo get_edit_user_link(); ?>#profiles" >Nutzerprofil</a> Links zu Ihren Social Media Profilen eintragen.  </p>
+    <p><b>Tipp:</b><?php
+        $url=get_edit_user_link().'#profiles';
+       $link=sprintf(__('Sie können in Ihrem <a href="%s">Nutzerprofil</a> Links zu Ihren Social Media Profilen eintragen.','webzunder'),esc_url($url));
+       echo $link ?></p>
 </form>
 </div>
 <div class="opright">
     <img class="logo" src="<?php echo plugin_dir_url(__FILE__) ?>logo.png" />
     <p>
-        Du willst deine Social Media Aktivitäten <b>besser kontrollieren und steuern können</b>? Dann probiere doch mal <b>das Plugin in Kombination 
+       <?php
+        $adurl="http://www.webzunder.com/de/wordpress-webzunder/?pk_campaign=plugin";
+        $adlink=sprintf(__('Du willst deine Social Media Aktivitäten <b>besser kontrollieren und steuern können</b>? Dann probiere doch mal <b>das Plugin in Kombination 
         mit webZunder aus</b>. Ganz einfach <b>30 Tage unverbindlich testen </b> und das eigene Online Marketing anheizen. <br><br>
-        Mehr Informationen dazu findest du auf <a href="http://www.webzunder.com/de/?pk_campaign=pluginpage"> www.webzunder.com</a>        
+        Mehr Informationen dazu findest du auf <a href="%s"> www.webzunder.com</a> ','webzunder'),esc_url($adurl));
+        echo $adlink;       
+        
+        
+        ?>
     </p>
     <br>    
     <form class="layout_form cr_form cr_font" action="http://29405.seu.cleverreach.com/f/29405-82025/wcs/" method="post" target="_blank">
-	    <p><b>Du willst über Neuerungen rund um das Plugin informiert werden?</b><br>Dann trag dich einfach in unsere Mailingliste ein. (kein SPAM)</p>
+	    <p><b><?php _e('Du willst über Neuerungen rund um das Plugin informiert werden?</b><br>Dann trag dich einfach in unsere Mailingliste ein. (kein SPAM)','webzunder');?></p>
         <label for="text1829098" class="itemname">E-Mail</label> <input id="text1829098" name="email" value="" type="text"  />
-        <button type="submit" class="cr_button">Anmelden</button>
+        <button type="submit" class="cr_button"><?php _e('Anmelden','webzunder');?></button>
     </form>
     
 </div>
@@ -262,21 +275,21 @@ add_action( 'edit_user_profile', 'wbZ_social_links' );
 function wbZ_social_links( $user )
 {
     ?>
-        <h3 id="profiles">Profile in Sozialen Netzwerken</h3>
+        <h3 id="profiles"><?php _e('Profile in Sozialen Netzwerken','webzunder'); ?></h3>
 
         <table class="form-table">
             <tr>
-                <th><label for="facebook_profile">Facebook Profil</label></th>
+                <th><label for="facebook_profile">Facebook</label></th>
                 <td><input type="text" name="facebook_profil" value="<?php echo esc_attr(get_the_author_meta( 'facebook_profil', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
 
             <tr>
-                <th><label for="twitter_profile">Twitter Profil</label></th>
+                <th><label for="twitter_profile">Twitter</label></th>
                 <td><input type="text" name="twitter_profil" value="<?php echo esc_attr(get_the_author_meta( 'twitter_profil', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
 
             <tr>
-                <th><label for="google_profile">Google+ Profil</label></th>
+                <th><label for="google_profile">Google+</label></th>
                 <td><input type="text" name="google_profil" value="<?php echo esc_attr(get_the_author_meta( 'google_profil', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
         </table>
@@ -333,7 +346,6 @@ function wbZ_meta_tags() {
             }else{
                 $post_object = get_post(get_the_ID());
                 $content= $post_object->post_content;
-                // $desc = wp_trim_words( $content, 160, '');
                 $desc = substr( strip_tags( $content ), 0, 160 );
                 
                 
@@ -428,7 +440,7 @@ function wbZ_notice_aioseo(){
         /* Check that the user hasn't already clicked to ignore the message */
         if ( ! get_user_meta($user_id, 'aioseo_ignore_notice') ) {
              echo '<div class="error" style="padding:10px;">';
-             printf(__(' Plugin "All in One SEO" ist aktiv. Bitte deaktivieren Sie dieses um Probleme mit webZunder zu vermeiden. <a class="button" style="margin-left:15px;" href="%1$s">Ist mir egal!</a>'), '?aioseo_nag_ignore=0');
+             printf(__(' Plugin "All in One SEO" ist aktiv. Bitte deaktivieren Sie dieses um Probleme mit webZunder zu vermeiden. <a class="button" style="margin-left:15px;" href="%1$s">Ist mir egal!</a>','webzunder'), '?aioseo_nag_ignore=0');
              echo '</div>';
          }
 } 
@@ -450,7 +462,7 @@ function wbZ_notice_yoast(){
         /* Check that the user hasn't already clicked to ignore the message */
         if ( ! get_user_meta($user_id, 'yoast_ignore_notice') ) {
              echo '<div class="error" style="padding:10px;">';
-             printf(__(' Plugin "Yoast WordPress SEO" ist aktiv. Bitte deaktivieren Sie dieses um Probleme mit webZunder zu vermeiden. <a class="button" style="margin-left:15px;" href="%1$s">Ist mir egal!</a>'), '?yoast_nag_ignore=0');
+             printf(__(' Plugin "Yoast WordPress SEO" ist aktiv. Bitte deaktivieren Sie dieses um Probleme mit webZunder zu vermeiden. <a class="button" style="margin-left:15px;" href="%1$s">Ist mir egal!</a>','webzunder'), '?yoast_nag_ignore=0');
              echo '</div>';
          }
 } 
