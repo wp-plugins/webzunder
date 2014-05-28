@@ -237,9 +237,10 @@ function wbZ_display_settings() {
          </table>
    
     <?php submit_button(); ?>
-    <p><b>Tipp:</b><?php
-        $url=get_edit_user_link().'#profiles';
-       $link=sprintf(__('Sie können in Ihrem <a href="%s">Nutzerprofil</a> Links zu Ihren Social Media Profilen eintragen.','webzunder'),esc_url($url));
+    <p><b><?php _e('Tipp:','webzunder'); ?></b><?php
+        _e('Sie können in Ihrem Nutzerprofil Links zu Ihren Social Media Profilen eintragen.','webzunder');
+       $url=get_edit_user_link().'#profiles';
+       $link=sprintf(__('<a href="%s">Zum Nutzerprofil gehen.</a>','webzunder'),esc_url($url));
        echo $link ?></p>
 </form>
 </div>
@@ -247,13 +248,12 @@ function wbZ_display_settings() {
     <img class="logo" src="<?php echo plugin_dir_url(__FILE__) ?>logo.png" />
     <p>
        <?php
+        _e('Du willst deine Social Media Aktivitäten <b>besser kontrollieren und steuern können</b>? Dann probiere doch mal <b>das Plugin in Kombination 
+        mit webZunder aus</b>. Ganz einfach <b>30 Tage unverbindlich testen </b> und das eigene Online Marketing anheizen.','webzunder');
+        echo '<br><br>';
         $adurl="http://www.webzunder.com/de/wordpress-webzunder/?pk_campaign=plugin";
-        $adlink=sprintf(__('Du willst deine Social Media Aktivitäten <b>besser kontrollieren und steuern können</b>? Dann probiere doch mal <b>das Plugin in Kombination 
-        mit webZunder aus</b>. Ganz einfach <b>30 Tage unverbindlich testen </b> und das eigene Online Marketing anheizen. <br><br>
-        Mehr Informationen dazu findest du auf <a href="%s"> www.webzunder.com</a> ','webzunder'),esc_url($adurl));
+        $adlink=sprintf(__('Mehr Informationen dazu findest du auf <a href="%s"> www.webzunder.com</a> ','webzunder'),esc_url($adurl));
         echo $adlink;       
-        
-        
         ?>
     </p>
     <br>    
@@ -279,7 +279,7 @@ function wbZ_social_links( $user )
 
         <table class="form-table">
             <tr>
-                <th><label for="facebook_profile">Facebook</label></th>
+                <th><label for="facebook_profile">Facebook URL</label></th>
                 <td><input type="text" name="facebook_profil" value="<?php echo esc_attr(get_the_author_meta( 'facebook_profil', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
 
@@ -289,7 +289,7 @@ function wbZ_social_links( $user )
             </tr>
 
             <tr>
-                <th><label for="google_profile">Google+</label></th>
+                <th><label for="google_profile">Google+ URL</label></th>
                 <td><input type="text" name="google_profil" value="<?php echo esc_attr(get_the_author_meta( 'google_profil', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
         </table>
