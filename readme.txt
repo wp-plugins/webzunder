@@ -1,10 +1,10 @@
 === webZunder Open Graph Plugin ===
 Contributors: chriskloss, twentyZen
-Tags: admin, blogpost, google, google plus, image, images, open graph, page, pages, plugin, Post, posts, re-post, seo, sharing, social, social network, social networks, socialnetwork, socialnetworks,Serp,Authorship,webZunder, Social Media, structured data,SEO, meta, meta description, search engine optimization, description, google authorship, google+, Social Sharing, twitter cards
+Tags: admin, blogpost, google, google plus, image, images, open graph, page, pages, plugin, Post, posts, re-post, seo, sharing, social, social network, social networks, socialnetwork, socialnetworks,Serp,Authorship,webZunder, schema.org, Social Media, structured data,SEO, meta, meta description, search engine optimization, description, google authorship, google+, Social Sharing, twitter cards
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.6.0
+Stable tag: 1.6.2
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
@@ -24,7 +24,7 @@ With the Plugin you can easily:
 *   connect your Facebook Business Page with your WordPress site (Facebook publisher tag)
 *   create a summary twitter card for your posts
 
-To avoid problems, we recommend to desist from parallel using other SEO-plugin which supports Open Graph meta, Google Authorship or twitter cards tags.
+To avoid problems, we recommend to desist from parallel using other SEO-plugin which supports Open Graph meta tags, Google Authorship or twitter cards.
 
 
 = HINT: = 
@@ -52,6 +52,10 @@ You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http
 
 
 == Changelog ==
+= 1.6.2 =
+1. added a bit schema.org for google+ 
+1. added some seo basics for article: keywords, canonical link, description tags 
+1. added summary twitter card support for frontpage
 = 1.6.0 =
 1. Added option to activate summary twitter card. easily add the twitter account of your page and your personal twitter account.
 Your Twitter Card must be validated by Twitter in order to work correctly. You can test and validate your Twitter Card using the Validator
