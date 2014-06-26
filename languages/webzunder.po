@@ -1,0 +1,200 @@
+# Copyright (C) 2014 webZunder Open Graph Plugin
+# This file is distributed under the same license as the webZunder Open Graph Plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: webZunder Open Graph Plugin 1.5.6\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/webzunder\n"
+"POT-Creation-Date: 2014-06-26 15:04:32+00:00\n"
+"PO-Revision-Date: 2014-06-26 17:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: webZunder <contact@webzunder.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: webzunder.php:79
+msgid "webZunder Optionen"
+msgstr "webZunder Options"
+
+#: webzunder.php:101
+msgid "Beitragstitel"
+msgstr "Title"
+
+#: webzunder.php:106
+msgid "Beitragsbeschreibung"
+msgstr "Description"
+
+#: webzunder.php:111
+msgid "Beitragsbild URL"
+msgstr " Image URL"
+
+#: webzunder.php:202
+msgid ""
+"Die hier erfassten Daten werden als Standard Angaben für die Open Graph Meta "
+"Tags genutzt und ausgeben, wenn keine anderen Daten angeben werden."
+msgstr ""
+"The data collected here, are used as the fallback information for the Open "
+"Graph meta tags and output when no other data are given."
+
+#: webzunder.php:213
+msgid "Standard-Beschreibung"
+msgstr "Fallback Description"
+
+#: webzunder.php:218
+msgid "Standard-Bild"
+msgstr "Fallback Image"
+
+#: webzunder.php:221
+msgid "Bild auswählen"
+msgstr "choose Image"
+
+#: webzunder.php:225
+msgid "Keywords per Komma getrennt"
+msgstr "Keywords comma seperated"
+
+#: webzunder.php:233
+msgid ""
+"Verbinden Sie ihre Google+ Seite mit ihrer Webseite. Einfach die Google+-ID "
+"angeben."
+msgstr ""
+"Just enter your Google+-ID to connect your Google+ Page with your WordPress."
+
+#: webzunder.php:240
+msgid ""
+"Verbinden Sie ihre Facebook Seite mit ihrer Webseite. Einfach die URL zu "
+"Facebook angeben."
+msgstr ""
+"Just enter your Facebook Page URL to connect your facebook Page with your "
+"WordPress"
+
+#: webzunder.php:243
+msgid "Facebook Seiten URL"
+msgstr "Facebook Page URL"
+
+#: webzunder.php:249
+msgid "Twitter Cards aktivieren"
+msgstr "activate Twitter Cards "
+
+#: webzunder.php:253
+msgid "Twittername der Seite ohne @"
+msgstr "Twittername without @"
+
+#: webzunder.php:261
+msgid "Hinweis: "
+msgstr "Attention:"
+
+#: webzunder.php:262
+msgid ""
+"Twitter Cards müssen vorher validiert werden damit diese vollständig "
+"funktionieren. Sie können Ihre Twitter Cards testen und von Twitter "
+"validieren lassen "
+msgstr ""
+"Your Twitter Card must be validated by Twitter in order to work correctly. "
+"You can test and validate your Twitter Card"
+
+#: webzunder.php:264
+msgid "<a href=\"%s\">mit dem Validator.</a>"
+msgstr "<a href=\"%s\"> using the Validator.</a>"
+
+#: webzunder.php:266
+msgid "Tipp: "
+msgstr "Hint:"
+
+#: webzunder.php:267
+msgid ""
+"Sie können in Ihrem Nutzerprofil Links zu Ihren Social Media Profilen "
+"eintragen. Diese Angaben werden für alle Autorendaten genutzt "
+msgstr ""
+"You can enter in your  user profile links to your social media profiles."
+
+#: webzunder.php:269
+msgid "<a href=\"%s\">Zum Nutzerprofil gehen.</a>"
+msgstr "<a href=\"%s\">Go to User profile.</a>"
+
+#: webzunder.php:277
+msgid ""
+"Du willst deine Social Media Aktivitäten <b>besser kontrollieren und steuern "
+"können</b>? Dann probiere doch mal <b>das Plugin in Kombination \r\n"
+"        mit webZunder aus</b>. Ganz einfach <b>30 Tage unverbindlich testen "
+"</b> und das eigene Online Marketing anheizen."
+msgstr ""
+"You want to <b>better monitor and control your social media activities</b>? "
+"Then try it out <b>the plugin in combination with webZunder</b>. Simply "
+"<b>try webZunder risk-free for 30 days</b> and push on your own online "
+"marketing"
+
+#: webzunder.php:281
+msgid ""
+"Mehr Informationen dazu findest du auf <a href=\"%s\"> www.webzunder.com</a> "
+msgstr ""
+"You can find further information on <a href=\"%s\"> www.webzunder.com</a>"
+
+#: webzunder.php:287
+msgid ""
+"Du willst über Neuerungen rund um das Plugin informiert werden?</b><br>Dann "
+"trag dich einfach in unsere Mailingliste ein. (kein SPAM)"
+msgstr ""
+"You want to be informed about innovations in the plugin? </ B> Then simply "
+"enter your E-Mail in our mailing list. (no SPAM)"
+
+#: webzunder.php:289
+msgid "Anmelden"
+msgstr "Subscribe"
+
+#: webzunder.php:304
+msgid "Profile in Sozialen Netzwerken"
+msgstr "Social Media Profiles"
+
+#: webzunder.php:559
+msgid ""
+" Plugin \"All in One SEO\" ist aktiv. Bitte deaktivieren Sie dieses um "
+"Probleme mit webZunder zu vermeiden. <a class=\"button\" style=\"margin-"
+"left:15px;\" href=\"%1$s\">Ist mir egal!</a>"
+msgstr ""
+"Plugin  \"All in One SEO \" is active. Please disable this to avoid problems "
+"with webZunder. <a class=\"button\" style=\"margin-left:15px;\" href=\"%1$s"
+"\"> I do not care </ a>"
+
+#: webzunder.php:581
+msgid ""
+" Plugin \"Yoast WordPress SEO\" ist aktiv. Bitte deaktivieren Sie dieses um "
+"Probleme mit webZunder zu vermeiden. <a class=\"button\" style=\"margin-"
+"left:15px;\" href=\"%1$s\">Ist mir egal!</a>"
+msgstr ""
+"Plugin  \"Yoast WordPress SEO \" is active. Please disable this to avoid "
+"problems with webZunder. <a class=\"button\" style=\"margin-left:15px;\" "
+"href=\"%1$s\"> I do not care </ a>"
+
+#. Plugin Name of the plugin/theme
+msgid "webZunder Open Graph Plugin"
+msgstr "webZunder Open Graph Plugin"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.webzunder.com/de/webZunder-Open-Graph-Plugin"
+msgstr "http://www.webzunder.com/de/webZunder-Open-Graph-Plugin"
+
+#. Description of the plugin/theme
+msgid ""
+"Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und "
+"Facebook aufbessern."
+msgstr ""
+"Improve the distribution of your website content easily by adding Open Graph "
+"information for Google and Facebook"
+
+#. Author of the plugin/theme
+msgid "twentyZen"
+msgstr "twentyZen GmbH"
+
+#. Author URI of the plugin/theme
+msgid "http://www.twentyzen.com"
+msgstr "http://www.twentyzen.com"
+
+#~ msgid ""
+#~ "Dieses Plugin zeigt die Open Graph Tags in die Webseite und gibt die in "
+#~ "webZunder eingetragenen Daten im WordPress an."
+#~ msgstr ""
+#~ "Improve the distribution of your website content easily by adding Open "
+#~ "Graph information for Google and Facebook"
