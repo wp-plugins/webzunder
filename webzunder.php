@@ -5,7 +5,7 @@
      Description: Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und Facebook aufbessern.
      Author URI: http://www.twentyzen.com
      Author: twentyZen
-     Version: 1.6.2.1
+     Version: 1.6.2.2
      License: GPL v2 or Later
      Text Domain: webzunder
      
@@ -478,7 +478,7 @@ function wbZ_meta_tags() {
         echo '<meta property="og:locale" content="'.strtr(get_bloginfo('language'),'-','_').'"/>'."\r\n";  /* og:locale changes from de-DE to de_DE*/
         echo '<meta property="og:type" content="'.$type.'"/>'."\r\n";  /* og:type */
         
-        }
+        
         
           
         if(is_single() && $type=="article" && !is_page()){
@@ -496,11 +496,12 @@ function wbZ_meta_tags() {
          echo '<meta property="article:modified_time" content="'.get_the_modified_date('c').'"/>'."\r\n";   /* modified date */
          echo '<meta property="og:updated_time" content="'.get_the_modified_date('c').'"/>'."\r\n";   /* modified date */
          
+        }
          echo "\r\n".'<!-- Google Stuff -->'."\r\n";
          
          
          /*Google Authorship*/
-	    if(get_the_author_meta( 'google_profil', $user_id )!=""){
+	    if(is_single() && $type=="article" && !is_page() && get_the_author_meta( 'google_profil', $user_id )!=""){
             echo '<link rel="author" href="'.get_the_author_meta( 'google_profil', $user_id ).'" />'."\r\n";
         }else{
             //nothing

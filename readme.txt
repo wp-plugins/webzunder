@@ -4,7 +4,7 @@ Tags: admin, blogpost, google, google plus, image, images, open graph, page, pag
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.6.2.1
+Stable tag: 1.6.2.2
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
@@ -52,10 +52,11 @@ You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http
 
 
 == Changelog ==
+= 1.6.2.2 =
+1. minor bugfixes
 = 1.6.2.1 =
 1. added option to define keywords for frontpage
 1. minor bugfixes
-
 = 1.6.2 =
 1. added a bit schema.org for google+ 
 1. added some seo basics for article: keywords, canonical link, description tags 
