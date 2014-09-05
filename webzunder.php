@@ -5,7 +5,7 @@
      Description: Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und Facebook aufbessern.
      Author URI: http://www.twentyzen.com
      Author: twentyZen
-     Version: 1.6.2.2
+     Version: 1.6.2.3
      License: GPL v2 or Later
      Text Domain: webzunder
      
@@ -27,7 +27,9 @@
 */
 
     //TODO Kommentare ergänzen bzw erneuern    
-   
+global $wbZ_version;
+$wbZ_version='1.6.2.3';
+
 load_plugin_textdomain('webzunder', false, basename( dirname( __FILE__ ) ) . '/languages' );
       
 /*enqueuing scripts and styles*/
@@ -176,6 +178,8 @@ add_action( 'save_post', 'wbZ_save_meta_box_data' );
 add_action('admin_init', 'wbZ_plugin_init');
 
 function wbZ_plugin_init() {
+    global $wbZ_version;
+    
 	register_setting( 'wbZ-settings-group', 'wbZ_description' );
 	register_setting( 'wbZ-settings-group', 'wbZ_image' );
 	register_setting( 'wbZ-settings-group', 'wbZ_keywords' );
@@ -191,6 +195,15 @@ function wbZ_plugin_init() {
 		    add_action( 'admin_notices', 'wbZ_notice_yoast' );
 	}	
 	
+    if(!get_option('wbZ_version')){
+        update_option( 'wbZ_version','0');
+    }
+        
+    $version= get_option( 'wbZ_version' );
+    
+    if ( $version <=  $wbZ_version)  {
+		update_option( 'wbZ_version', $wbZ_version );
+	}
 }
 
 /*Option Page*/
