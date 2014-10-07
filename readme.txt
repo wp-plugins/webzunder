@@ -3,7 +3,7 @@ Contributors: chriskloss, twentyZen
 Tags: admin, blogpost, google, google plus, image, images, open graph, page, pages, plugin, Post, posts, re-post, seo, sharing, social, social network, social networks, socialnetwork, socialnetworks,Serp,Authorship,webZunder, schema.org, Social Media, structured data,SEO, meta, meta description, search engine optimization, description, google authorship, google+, Social Sharing, twitter cards
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: 1.6.2.4
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
