@@ -5,7 +5,7 @@
      Description: Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und Facebook aufbessern.
      Author URI: http://www.twentyzen.com
      Author: twentyZen
-     Version: 1.6.2.3
+     Version: 1.6.2.4
      License: GPL v2 or Later
      Text Domain: webzunder
      
@@ -28,7 +28,7 @@
 
     //TODO Kommentare ergänzen bzw erneuern    
 global $wbZ_version;
-$wbZ_version='1.6.2.3';
+$wbZ_version='1.6.2.4';
 
 load_plugin_textdomain('webzunder', false, basename( dirname( __FILE__ ) ) . '/languages' );
       
@@ -391,7 +391,7 @@ function wbZ_meta_tags() {
               echo '<meta name="keywords" content="'.$keyw.'"/>'."\r\n";   /* keywords defined in plugin (default)*/
              }
              echo "\r\n".'<!-- Open Graph -->'."\r\n"; 
-            echo '<meta property="og:title" content="'.get_bloginfo('title').'"/>'."\r\n"; /*og:title  filled by wordpress*/
+            echo '<meta property="og:title" content="'.esc_html(get_bloginfo('title')).'"/>'."\r\n"; /*og:title  filled by wordpress*/
              if(get_option('wbZ_description')!=""){
              echo '<meta property="og:description" content="'.esc_html(get_option('wbZ_description')).'"/>'."\r\n";   /* og:description defined in plugin (default)*/
             }
@@ -462,7 +462,7 @@ function wbZ_meta_tags() {
         }else{
             $title= $custom_fields['og:title'][0]; /* og:title custom field filled by webZunder*/
        }
-              echo '<meta property="og:title" content="'.$title.'"/>'."\r\n"; /*og:title  filled by wordpress*/
+              echo '<meta property="og:title" content="'.esc_html($title).'"/>'."\r\n"; /*og:title  filled by wordpress*/
              
               echo '<meta property="og:description" content="'.esc_html($desc).'"/>'."\r\n"; 
              
@@ -527,7 +527,7 @@ function wbZ_meta_tags() {
              echo '<link rel="publisher" href="https://plus.google.com/+'.get_option('wbZ_googleid').'"/>'."\r\n";
         }
         }
-        echo '<meta itemprop="name" content="'.$title.'">'."\r\n";
+        echo '<meta itemprop="name" content="'.esc_html($title).'">'."\r\n";
         echo '<meta itemprop="description" content="'.$desc.'">'."\r\n";
         echo '<meta itemprop="image" content="'.$image.'"'."\r\n";
         
@@ -537,7 +537,7 @@ function wbZ_meta_tags() {
             echo "\r\n".'<!-- Twitter Card -->'."\r\n";
             echo "\r\n".'<meta name="twitter:card" content="summary">'."\r\n";
             echo '<meta name="twitter:site" content="'.get_option('wbZ_twtid').'">'."\r\n";
-            echo '<meta name="twitter:title" content="'.$title.'">'."\r\n";
+            echo '<meta name="twitter:title" content="'.esc_html($title).'">'."\r\n";
             echo '<meta name="twitter:description" content="'.$desc.'">'."\r\n";
             echo '<meta name="twitter:creator" content="'.get_the_author_meta( 'twitter_profil', $user_id ).'">'."\r\n";
             echo '<meta name="twitter:image:src" content="'.$image.'">'."\r\n";

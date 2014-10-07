@@ -4,7 +4,7 @@ Tags: admin, blogpost, google, google plus, image, images, open graph, page, pag
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.6.2.3
+Stable tag: 1.6.2.4
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
@@ -52,6 +52,9 @@ You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http
 
 
 == Changelog ==
+= 1.6.2.4 =
+1.[Bugfix] Fixed Problem with special chars in title
+
 = 1.6.2.3 =
 1. Tested with WordPress 4.0
 1. Added Version Handling for future Development
