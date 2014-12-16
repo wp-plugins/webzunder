@@ -53,7 +53,7 @@ You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http
 
 == Changelog ==
 = 1.6.2.5 =
-1.[Bugfix] added missing ">" for Image part in Google Stuff
+1.[Bugfix] Fixed problem with missing image 
 
 = 1.6.2.4 =
 1.[Bugfix] Fixed Problem with special chars in title
