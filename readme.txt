@@ -4,7 +4,7 @@ Tags: admin, blogpost, google, google plus, image, images, open graph, page, pag
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
 Tested up to: 4.0.1
-Stable tag: 1.6.2.5
+Stable tag: 1.6.2.6
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
@@ -52,6 +52,9 @@ You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http
 
 
 == Changelog ==
+= 1.6.2.6 =
+1.[Bugfix] added the missing part from bugfix for 1.6.2.5 in google stuff 
+
 = 1.6.2.5 =
 1.[Bugfix] Fixed problem with missing image 
 

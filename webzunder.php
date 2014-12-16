@@ -5,7 +5,7 @@
      Description: Die eigene Webseite kinderleicht mit Open Graph Meta Tags für Google und Facebook aufbessern.
      Author URI: http://www.twentyzen.com
      Author: twentyZen
-     Version: 1.6.2.4
+     Version: 1.6.2.6
      License: GPL v2 or Later
      Text Domain: webzunder
      
@@ -28,7 +28,7 @@
 
     //TODO Kommentare ergänzen bzw erneuern    
 global $wbZ_version;
-$wbZ_version='1.6.2.4';
+$wbZ_version='1.6.2.6';
 
 load_plugin_textdomain('webzunder', false, basename( dirname( __FILE__ ) ) . '/languages' );
       
@@ -415,8 +415,9 @@ function wbZ_meta_tags() {
             }
             echo '<meta itemprop="name" content="'.get_bloginfo('name').'">'."\r\n";
             echo '<meta itemprop="description" content="'.$desc.'">'."\r\n";
-            echo '<meta itemprop="image" content="'.$image.'>"'."\r\n";
-        
+        if($image!=""){
+            echo '<meta itemprop="image" content="'.$image.'">'."\r\n";
+        }
             
           if(get_option('wbZ_twtcheck')=="1"){
             echo "\r\n".'<!-- Twitter Card -->'."\r\n";
@@ -529,8 +530,9 @@ function wbZ_meta_tags() {
         }
         echo '<meta itemprop="name" content="'.esc_html($title).'">'."\r\n";
         echo '<meta itemprop="description" content="'.$desc.'">'."\r\n";
-        echo '<meta itemprop="image" content="'.$image.'"'."\r\n";
-        
+        if($image!=""){
+            echo '<meta itemprop="image" content="'.$image.'">'."\r\n";
+        }
         /*Twittercards*/
        
         if(get_option('wbZ_twtcheck')=="1"){
