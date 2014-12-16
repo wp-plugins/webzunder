@@ -3,8 +3,8 @@ Contributors: chriskloss, twentyZen
 Tags: admin, blogpost, google, google plus, image, images, open graph, page, pages, plugin, Post, posts, re-post, seo, sharing, social, social network, social networks, socialnetwork, socialnetworks,Serp,Authorship,webZunder, schema.org, Social Media, structured data,SEO, meta, meta description, search engine optimization, description, google authorship, google+, Social Sharing, twitter cards
 Donate link: http://www.webzunder.com/de/
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 1.6.2.4
+Tested up to: 4.0.1
+Stable tag: 1.6.2.5
 License: GPL v2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 
@@ -52,6 +52,9 @@ You can find the faq on [www.webzunder.com/de/webzunder-open-graph-plugin/](http
 
 
 == Changelog ==
+= 1.6.2.5 =
+1.[Bugfix] added missing ">" for Image part in Google Stuff
+
 = 1.6.2.4 =
 1.[Bugfix] Fixed Problem with special chars in title
 

@@ -415,7 +415,7 @@ function wbZ_meta_tags() {
             }
             echo '<meta itemprop="name" content="'.get_bloginfo('name').'">'."\r\n";
             echo '<meta itemprop="description" content="'.$desc.'">'."\r\n";
-            echo '<meta itemprop="image" content="'.$image.'"'."\r\n";
+            echo '<meta itemprop="image" content="'.$image.'>"'."\r\n";
         
             
           if(get_option('wbZ_twtcheck')=="1"){
